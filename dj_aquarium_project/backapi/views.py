@@ -110,16 +110,27 @@ class FileUploadView(APIView):
             return Response(f'File not found!', status=HTTP_400_BAD_REQUEST)
 
 
-class GetByMonth(APIView):
+class GetNumberByMonth(APIView):
     def get(self, request):
         queryset = TicketOrder.objects.filter(departureDate__year='2022')
         dataByMonth = []
-        for i in range(1, 12):
-            dataByMonth.append(TicketOrderSerializer(queryset.filter(departureDate__month="{:02d}".format(i)), many=True).data)
+        for i in range(1, 13):
+            dataByMonth.append(len(TicketOrderSerializer(queryset.filter(departureDate__month="{:02d}".format(i)), many=True).data))
         print(dataByMonth)
         return Response(dataByMonth)
 
+class GetCostByMonth(APIView):
+    def get(self, request):
+        queryset = TicketOrder.objects.filter(departureDate__year='2022')
+        dataByMonth = [0,0,0,0,0,0,0,0,0,0,0,0]
+        for i in range(1, 13):
+            alldata = TicketOrderSerializer(queryset.filter(departureDate__month="{:02d}".format(i)), many=True).data
+            for j in alldata:
 
+                dataByMonth[i-1]+= sum([float(j['costTicket']), float(j['costPlatzcard']), float(j['costService'])] )
+            # dataByMonth.append(len(TicketOrderSerializer(queryset.filter(departureDate__month="{:02d}".format(i)), many=True).data))
+        print(dataByMonth)
+        return Response(dataByMonth)
 
 
 def download_data(request):

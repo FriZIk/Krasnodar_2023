@@ -13,7 +13,8 @@ urlpatterns = [
     path('get_configuration_file/', GetConfFile.as_view()),
     path('single-file/', FileUploadView.as_view()),
     path('export_exel/', download_data),
-    path('getByMonth/', GetByMonth.as_view()),
+    path('getByMonth/', GetNumberByMonth.as_view()),
+    path('getCostByMonth/', GetCostByMonth.as_view()),
     # path('backapi/', include('backapi.urls')),
    
 ]
