@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <a class="head" href="">
-      <img src="../assets/icon_comand.png">
-    </a>
+  <div class="container">
+    <div class="row">
+      <h4>
+        <img src="../assets/last.png">
+      </h4>
+    </div>
   </div>
 </template>

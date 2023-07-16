@@ -57,45 +57,40 @@ function closeModal() {
             </button>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-            <img src="../assets/train.png" class="img-fluid animated" alt="">
+            <img src="../assets/new_assets/train.png" width="800" height="800" class="img-fluid animated" alt="">
           </div>
         </div>
       </div>
     </section>
   </div>
-
+  
 
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
+      <div class="container"  >
+        <div class="row1 justify-content-around">
           <div class="col-lg-4">
-            <h4>Кроссплатформенность<img src="../assets/pic1.png" width="150" height="150"
-                class="d-inline-block alighn-top" alt=""></h4>
-            <p>Рассчитанная стоимость поездки по выбранному маршруту</p>
+            <h4 class="footer-img">Кроссплатформенность<img src="../assets/new_assets/1.png" width="150" height="150" alt=""></h4>
+            <p class = "fotter-text">Возможность запуска приложений с различных устройств</p>
           </div>
           <div class="col-lg-4">
-            <h4>Автоматизированная аналитика<img src="../assets/pic2.png" width="150" height="150"
-                class="d-inline-block alighn-top" alt=""></h4>
-            <p>Рассчитанная стоимость поездки по выбранному маршруту</p>
+            <h4 class="footer-img">Автоматизированная аналитика<img src="../assets/new_assets/2.png" width="150" height="150" alt=""></h4>
+            <p class = "fotter-text">Возможность функционирования без участия человека</p>
           </div>
           <div class="col-lg-4">
-            <h4>Анализ данных из открытых источников<img src="../assets/pic3.png" width="150" height="150"
-                class="d-inline-block alighn-top" alt=""></h4>
-            <p>Рассчитанная стоимость поездки по выбранному маршруту</p>
+            <h4 class="footer-img">Анализ открытых данных<img src="../assets/new_assets/3.png" width="150" height="150" alt=""></h4>
+            <p class = "fotter-text">Возможность учитывать произвольные события</p>
           </div>
-          <div class="col-lg-4">
-            <h4>Масштабируемость<img src="../assets/pic4.png" width="150" height="150" class="d-inline-block alighn-top"
-                alt=""></h4>
-            <p>Рассчитанная стоимость поездки по выбранному маршруту</p>
+          <div class="col-lg-4" >
+            <h4 class="footer-img">Масштабируемость системы<img src="../assets/new_assets/4.png" width="150" height="150" alt=""></h4>
+            <p class = "fotter-text">Архитектура системы предусматривает расширение имеющегося функционала</p>
           </div>
         </div>
       </div>
     </div>
-
-
+    
   </footer>
   <AppLayout title="Modal Demo">
 

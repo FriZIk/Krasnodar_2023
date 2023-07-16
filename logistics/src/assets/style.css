@@ -4,13 +4,16 @@
 --------------------------------------------------------------*/
   #hero {
     width: 100%;
-    height: 70vh;
+    height: 100%;
     /* background: #37517e; */
-    background: #412227;
+    background: #989EA1;
   }
 
   #hero .container {
-    padding-top: 20px;
+    /* padding-top: 20px; */
+    width: 80%;
+    
+    
   }
 
   #hero h1 {
@@ -69,63 +72,6 @@
 
   #hero .animated {
     animation: up-down 2s ease-in-out infinite alternate-reverse both;
-  }
-
-  @media (max-width: 991px) {
-    #hero {
-      height: 100vh;
-      text-align: center;
-    }
-
-    #hero .animated {
-      animation: none;
-    }
-
-    #hero .hero-img {
-      text-align: center;
-    }
-
-    #hero .hero-img img {
-      width: 50%;
-    }
-  }
-
-  @media (max-width: 768px) {
-    #hero h1 {
-      font-size: 28px;
-      line-height: 36px;
-    }
-
-    #hero h2 {
-      font-size: 18px;
-      line-height: 24px;
-      margin-bottom: 30px;
-    }
-
-    #hero .hero-img img {
-      width: 70%;
-    }
-  }
-
-  @media (max-width: 575px) {
-    #hero .hero-img img {
-      width: 80%;
-    }
-
-    #hero .btn-get-started {
-      font-size: 16px;
-      padding: 10px 24px 11px 24px;
-    }
-  }
-
-  @keyframes up-down {
-    0% {
-      transform: translateY(10px);
-    }
-
-    100% {
-      transform: translateY(-10px);
-    }
   }
 
 
@@ -323,4 +269,48 @@
 .navbar{
   padding: 10px 2em;
   box-sizing: border-box;
+}
+
+.row1 {
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: large;
+}
+
+@media (max-width: 768px) and (min-width: 300px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  #hero .hero-img img {
+    width: 70%;
+  }
+}
+
+@media (max-width: 300px) {
+  #hero .hero-img img {
+    width: 80%;
+  }
+
+  #hero .btn-get-started {
+    font-size: 16px;
+    padding: 10px 24px 11px 24px;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
 }

@@ -2,11 +2,7 @@
   <div class="span-col-10" styles="padding: 0 20px; box-sizing: border-box;">
     <nav class="navbar navbar-dark bg-dark">
       <div>
-        <a class="navbar-brand" href="">
-          <img src="../src/assets/new_rgd.png" width="100" height="40" class="d-inline-block alighn-top" alt="">
-          <!-- --<strong> Веб-интерфейс рекомендательной системы</strong> -->
-        </a>
-        <a ><img src="../src/assets/new_icon_comand.png" width="160" height="40" class="d-inline-block alighn-top"
+        <a ><img src="../src/assets/new_assets/logo.png" width="160" height="40" class="d-inline-block alighn-top"
             alt=""></a>
       </div>
 
