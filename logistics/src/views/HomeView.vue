@@ -72,29 +72,30 @@ function closeModal() {
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-4">
-            <h4>Пункт назначения</h4>
+            <h4>Кроссплатформенность<img src="../assets/pic1.png" width="150" height="150"
+                class="d-inline-block alighn-top" alt=""></h4>
             <p>Рассчитанная стоимость поездки по выбранному маршруту</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Перерасчёт">
-            </form>
           </div>
           <div class="col-lg-4">
-            <h4>Результат вычислений</h4>
+            <h4>Автоматизированная аналитика<img src="../assets/pic2.png" width="150" height="150"
+                class="d-inline-block alighn-top" alt=""></h4>
             <p>Рассчитанная стоимость поездки по выбранному маршруту</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Перерасчёт">
-            </form>
           </div>
           <div class="col-lg-4">
-            <h4>Результат вычислений</h4>
+            <h4>Анализ данных из открытых источников<img src="../assets/pic3.png" width="150" height="150"
+                class="d-inline-block alighn-top" alt=""></h4>
             <p>Рассчитанная стоимость поездки по выбранному маршруту</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Перерасчёт">
-            </form>
+          </div>
+          <div class="col-lg-4">
+            <h4>Масштабируемость<img src="../assets/pic4.png" width="150" height="150" class="d-inline-block alighn-top"
+                alt=""></h4>
+            <p>Рассчитанная стоимость поездки по выбранному маршруту</p>
           </div>
         </div>
       </div>
     </div>
+
+
   </footer>
   <AppLayout title="Modal Demo">
 
@@ -153,7 +154,8 @@ function closeModal() {
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" v-on:click="closeModal">Отмена</button>
-            <button type="button" class="btn btn-primary" refs="my_input" v-on:click="GetConfigurationFile()">Провести расчёт </button>
+            <button type="button" class="btn btn-primary" refs="my_input" v-on:click="GetConfigurationFile()">Провести
+              расчёт </button>
           </div>
         </div>
       </div>
@@ -173,21 +175,20 @@ export default {
   },
 
   methods: {
-    GetConfigurationFile()  
-    {
-    var date = document.getElementById("date");
-    var from = document.getElementById("from");
-    var to = document.getElementById("to");
-    var Class = document.getElementById("Class");
-    var count = document.getElementById("count");
+    GetConfigurationFile() {
+      var date = document.getElementById("date");
+      var from = document.getElementById("from");
+      var to = document.getElementById("to");
+      var Class = document.getElementById("Class");
+      var count = document.getElementById("count");
 
-    console.log(date.value);
-    console.log(from.value);
-    console.log(to.value);
-    console.log(Class.value);
-    console.log(count.value);
+      console.log(date.value);
+      console.log(from.value);
+      console.log(to.value);
+      console.log(Class.value);
+      console.log(count.value);
 
-    axios.get("http://83.221.202.194:2500/backapi/get_configuration_file?date=" + date.value + "&from=" + from.value + "&to=" + to.value + "&Class=" + Class.value + "&count=" + count.value)
+      axios.get("http://83.221.202.194:2500/backapi/get_configuration_file?date=" + date.value + "&from=" + from.value + "&to=" + to.value + "&Class=" + Class.value + "&count=" + count.value)
         .then((response) => {
           console.log(response);
           var result = document.getElementById("result");
@@ -197,9 +198,9 @@ export default {
         .catch((errors) => {
           console.log(errors); // Errors
         });
-  }
+    }
   },
-  
+
   computed: {
   }
 };
